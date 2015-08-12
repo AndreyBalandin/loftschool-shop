@@ -31,6 +31,11 @@ gulp.task('jade', function() {
     //.pipe(reload({stream: true}));
 });
 
+// следить и компилировать jade
+gulp.task('watch-jade', function () {
+  gulp.watch('src/templates/**/*.jade', ['jade']);
+});
+
 // подключить ссылки на bower components
 gulp.task('wiredep', function () {
   gulp.src('src/templates/common/*.jade')

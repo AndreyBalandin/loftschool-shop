@@ -1,6 +1,42 @@
 footer.footer
-	.container
-		.copyright © 2015, web-app-template
+  .footer-container
+    .logo-white
+      a(href="#")
+        img(src="img/logo-white.png", alt="Логотип ЭпплShop")
+        span.visuallyhidden Логотип ЭпплShop
+    nav.map
+      .map__column
+        h3.map__header О магазине
+        ul.map__list
+          li.map__item: a.map__link(href="#") О нас
+          li.map__item: a.map__link(href="#") Наши цены
+          li.map__item: a.map__link(href="#") Наши скидки
+          li.map__item: a.map__link(href="#") Акции
+      .map__column
+        h3.map__header Каталог
+        ul.map__list
+          li.map__item: a.map__link(href="#") Смартфоны
+          li.map__item: a.map__link(href="#") Планшеты
+          li.map__item: a.map__link(href="#") Компьютеры
+          li.map__item: a.map__link(href="#") Аксессуары
+      .map__column
+        h3.map__header Контакты
+        ul.map__list
+          li.map__item: a.map__link(href="#") Телефоны
+          li.map__item: a.map__link(href="#") Адреса
+          li.map__item: a.map__link(href="#") Карта проезда
+          li.map__item: a.map__link(href="#") Обратная связь
+    .buttons
+      //- кнопки доступности товара в магазине
+      ul.buttons__list
+        li.buttons__item: a.buttons__store-link.apple.texthidden(href="#") Доступно в AppStore
+        li.buttons__item: a.buttons__store-link.google.texthidden(href="#") Доступно в GooglePlay
+      //- социальные кнопки
+      ul.buttons__list
+        li.buttons__item: a.buttons__social-link.vk.texthidden(href="#", target="_blank") ВКонтакте
+        li.buttons__item: a.buttons__social-link.fb.texthidden(href="#", target="_blank") Facebook
+        li.buttons__item: a.buttons__social-link.tw.texthidden(href="#", target="_blank") Twitter
+
 
 // Javascript
 // build:js js/vendor.js

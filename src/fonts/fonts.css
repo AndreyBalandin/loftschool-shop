@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Elektra Light Pro';
+    src: url('Elektra Light Pro.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Elektra Light Pro Bold';
+    src: url('Elektra Light Pro Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Elektra Medium Pro';
+    src: url('Elektra Medium Pro.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Elektra Medium Pro Italic';
+    src: url('Elektra Medium Pro Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
