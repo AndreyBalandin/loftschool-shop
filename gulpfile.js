@@ -1,6 +1,6 @@
 'use strict';
 // установка плагинов:
-// npm install --save-dev gulp gulp-useref gulp-if gulp-uglify gulp-minify-css gulp-filter gulp-imagemin rimraf gulp-jade
+// npm install --save-dev gulp gulp-useref gulp-if gulp-uglify gulp-minify-css gulp-filter gulp-imagemin rimraf gulp-jade gulp-sass
 
 var gulp = require("gulp"),
     useref = require('gulp-useref'),
@@ -10,7 +10,8 @@ var gulp = require("gulp"),
     rimraf = require('rimraf'),            // быстро удаляет весь каталог
     filter = require('gulp-filter'),       // фильтрация файлов
     imagemin = require('gulp-imagemin'),   // минификация изображений
-    jade = require('gulp-jade');           // препроцессор jade
+    jade = require('gulp-jade'),           // препроцессор jade
+    sass = require('gulp-sass');           // препроцессор sass
     //wiredep = require('wiredep').stream,
     //size = require('gulp-size'),
     //browserSync = require('browser-sync'),
@@ -24,25 +25,27 @@ var gulp = require("gulp"),
 
 // скомпилировать Jade в html
 gulp.task('jade', function() {
-  gulp.src('src/templates/pages/*.jade')
+  gulp.src('src/jade/pages/*.jade')
     .pipe(jade({ pretty: true }))
     .on('error', log)
     .pipe(gulp.dest('src/'))
     //.pipe(reload({stream: true}));
 });
 
-// следить и компилировать jade
-gulp.task('watch-jade', function () {
-  gulp.watch('src/templates/**/*.jade', ['jade']);
+// скомпилировать Sass в css
+gulp.task('sass', function () {
+  gulp.src('src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('src/css'));
 });
 
 // подключить ссылки на bower components
 gulp.task('wiredep', function () {
-  gulp.src('src/templates/common/*.jade')
+  gulp.src('src/jade/common/*.jade')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
       }))
-    .pipe(gulp.dest('src/templates/common/'))
+    .pipe(gulp.dest('src/jade/common/'))
 });
 
 // запустить локальный сервер (только после компиляции jade)
@@ -56,14 +59,15 @@ gulp.task('server', ['jade'], function () {
   });
 });
 
-// слежка и запуск задач
+// следить и компилировать jade и sass
 gulp.task('watch', function () {
-  gulp.watch('src/templates/**/*.jade', ['jade']);
-  gulp.watch('bower.json', ['wiredep']);
-  gulp.watch([
-    'app/js/**/*.js',
-    'app/css/**/*.css'
-  ]).on('change', reload);
+  gulp.watch('src/jade/**/*.jade', ['jade']);
+  gulp.watch('src/sass/**/*.scss', ['sass']);
+  // gulp.watch('bower.json', ['wiredep']);
+  // gulp.watch([
+  //   'app/js/**/*.js',
+  //   'app/css/**/*.css'
+  // ]).on('change', reload);
 });
 
 // задача по-умолчанию

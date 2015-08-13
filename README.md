@@ -10,13 +10,15 @@ cd site
 npm install
 bower install
 ```
-
 ### Сборка html-файлов из jade-шаблонов
 ```
 gulp jade
 ```
-
-### Сборка проекта в каталог dist
+### Сборка sass-файлов из scss-шаблонов
+```
+gulp sass
+```
+### Сборка всего проекта в каталог dist
 ```
 gulp build
 ```

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* стили для страницы с товаром */
+.menu-point {
+  line-height: 60px; }
+
+.menu-point__link {
+  padding: 0 5px;
+  color: #00b9fe; }
+  .menu-point__link:hover {
+    color: #613993; }
+  .menu-point__link:first-child {
+    padding-left: 0; }

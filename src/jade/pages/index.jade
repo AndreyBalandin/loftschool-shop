@@ -1,0 +1,21 @@
+extends ../layouts/main_layout.jade
+
+block title
+  title О товаре
+
+block menu_current
+  - var menu_current = 'Планшеты';
+
+block content
+  main.main
+    .container
+      //- строка с текущей точкой каталога товаров
+      nav.menu-point
+        a.menu-point__link(href="#") Главная
+        span >
+        a.menu-point__link(href="#") Каталог
+        span > iPad Air Wi-Fi + Cellular 128GB - Silver
+
+      h1 Название товара
+      p Описание:
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati rem, consequuntur illum atque sint hic quidem dolores neque facilis eaque, earum error vitae quis, eligendi tempore? Et, optio, id!

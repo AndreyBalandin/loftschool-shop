@@ -1,17 +1,23 @@
-@charset "UTF-8";
-html {
-  height: 100%; }
+$text-color: #5c7b98;
+$footer-background: #613993 url("../img/pattern.png");
+$menu-background: #00b9fe;
 
+
+html {
+  height: 100%;
+}
 body {
   height: 100%;
-  color: #5c7b98;
-  font: normal 15px "Elektra Light Pro"; }
+  color: $text-color;
+  font: normal 15px 'Elektra Light Pro';
+}
 
 .container {
   position: relative;
   width: 1000px;
   height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /*---------- прибить футер ----------*/
 .wrapper {
@@ -19,276 +25,314 @@ body {
   min-height: 100%;
   /* минимальная ширина на 10 пикселей шире контейнера */
   min-width: 1010px;
-  height: auto !important;
-  overflow: hidden; }
+  height: auto!important;
+  overflow: hidden;
+}
 
 .wrapper:after {
   display: block;
   content: "";
-  height: 228px; }
-
-.footer {
   height: 228px;
-  margin-top: -228px; }
+}
+
+.footer{
+  height: 228px;
+  margin-top: -228px;
+}
+
 
 /*------------------------------------*/
 /*-------------- header --------------*/
 /*------------------------------------*/
+
 /*-------------- top-line --------------*/
 .top-line {
   position: relative;
   height: 40px;
   background: #434a52;
-  text-align: center; }
+  text-align: center;
+}
 
 /*---------- top-buttons ----------*/
 .top-line .top-buttons {
   position: absolute;
   top: 8px;
-  left: 0; }
+  left: 0;
+}
 
 .top-buttons {
-  text-align: left; }
+  text-align: left;
+}
 
 .top-buttons__list {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .top-buttons__item {
   display: inline-block;
-  margin-left: 4px; }
+  margin-left: 4px;
+}
 
 .top-buttons__item:first-child {
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 .top-buttons__link {
   display: block;
   background: url("../img/sprites-socials-mini.png") no-repeat;
   width: 24px;
-  height: 25px; }
+  height: 25px;
+}
 
-.fb-mini {
-  background-position: -2px -2px; }
-
-.tw-mini {
-  background-position: -30px -2px; }
-
-.vk-mini {
-  background-position: -58px -2px; }
+.fb-mini { background-position: -2px -2px; }
+.tw-mini { background-position: -30px -2px; }
+.vk-mini { background-position: -58px -2px; }
 
 /*---------- geo ----------*/
 .top-line .top-geo {
   display: inline-block;
   max-width: 550px;
   margin-top: 8px;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .top-geo {
   background: url("../img/geo.png") no-repeat left;
   padding: 7px 0 3px 25px;
-  font-size: 13px; }
+  font-size: 13px;
+}
 
 /*---------- top-phone ----------*/
 .top-line .top-phone {
   position: absolute;
   top: 12px;
-  right: 0; }
+  right: 0;
+}
 
 .top-phone__link {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .top-phone__prefix {
   vertical-align: super;
   font-size: 14px;
-  color: #00b9fe; }
+  color: #00b9fe;
+}
 
 .top-phone__number {
   margin-left: 12px;
   font-size: 24px;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 /*-------------- search-line --------------*/
 .search-line {
   position: relative;
   line-height: 100px;
-  background: #edf2f8; }
+  background: #edf2f8;
+}
 
 .search-line .logo-main {
   position: absolute;
   top: 24px;
-  left: 0; }
+  left: 0;
+}
 
 .search-line__input {
   margin-left: 258px;
   border: 0;
   padding: 10px 8px;
   width: 323px;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
-*::-webkit-input-placeholder {
-  color: #edf2f8; }
-
-*::-moz-placeholder {
-  color: #edf2f8; }
-
-*:-ms-input-placeholder {
-  color: #edf2f8; }
+*::-webkit-input-placeholder { color: #edf2f8; }
+*::-moz-placeholder { color: #edf2f8; }
+*:-ms-input-placeholder { color: #edf2f8; }
 
 .search-line__link {
   margin-left: 27px;
   font-size: 13px;
-  color: #00b9fe; }
-  .search-line__link:hover {
-    color: #613993; }
-  .search-line__link.basket {
+  color: #00b9fe;
+  &:hover {
+    color: #613993;
+  }
+  &.basket {
     background: url("../img/basket.png") no-repeat left;
-    padding: 5px 0 1px 30px; }
+    padding: 5px 0 1px 30px;
+  }
+}
 
 /*-------------- menu --------------*/
 .menu {
   position: relative;
   line-height: 40px;
-  background: #00b9fe; }
+  background: $menu-background;
+}
 
 .menu__list {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .menu__item {
   display: inline-block;
   margin-left: 4px;
-  color: #5c7b98; }
-  .menu__item:first-child {
-    margin-left: 0; }
-  .menu__item.current {
-    color: #f7f7f7; }
+  &:first-child {
+    margin-left: 0;
+  }
+  color: $text-color;
+  &.current {
+    color: #f7f7f7;
+  }
+}
 
 .menu__link {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  //font-size: 15px;
+}
+
 
 /*------------------------------------*/
 /*-------------- footer --------------*/
 /*------------------------------------*/
 .footer {
-  background: #613993 url("../img/pattern.png");
-  text-align: center; }
+  background: $footer-background;
+  text-align: center;
+}
 
 /*---------- logo-white ----------*/
 .footer .logo-white {
   position: absolute;
   top: 100px;
-  left: 0; }
+  left: 0;
+}
 
 /*---------- map ----------*/
 .footer .map {
   display: inline-block;
   padding-top: 62px;
   /* белый цвет только внутри футера */
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .map__column {
   display: inline-block;
   vertical-align: top;
   margin-left: 70px;
-  text-align: left; }
+  text-align: left;
+}
 
 .map__column:first-child {
-  margin-left: 0px; }
+  margin-left: 0px;
+}
 
 .map__header {
   margin: 0 0 8px 0;
   font: 15px 'Elektra Light Pro Bold';
-  color: inherit; }
+  color: inherit;
+}
 
 .map__list {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .map__item {
-  margin-bottom: 7px; }
+  margin-bottom: 7px;
+}
 
 .map__link {
-  color: inherit; }
+  //font-size: 15px;
+  color: inherit;
+}
 
 /*---------- buttons ----------*/
 .footer .buttons {
   position: absolute;
   top: 72px;
-  right: 0; }
+  right: 0;
+}
 
 .buttons {
-  text-align: left; }
+  text-align: left;
+}
 
 .buttons__list {
   list-style: none;
   margin: 0 0 22px 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .buttons__item {
   display: inline-block;
-  margin-left: 2px; }
+  margin-left: 2px;
+}
 
 .buttons__item:first-child {
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 .buttons__store-link {
   display: block;
   background: url("../img/sprites-store.png") no-repeat;
   width: 90px;
-  height: 32px; }
+  height: 32px;
+}
 
-.apple {
-  background-position: -5px -5px; }
-
-.google {
-  background-position: -105px -5px; }
+.apple { background-position: -5px -5px; }
+.google { background-position: -105px -5px; }
 
 .buttons__social-link {
   display: block;
   background: url("../img/sprites-socials.png") no-repeat;
   width: 44px;
-  height: 44px; }
+  height: 44px;
+}
 
-.fb {
-  background-position: -5px -5px; }
+.fb { background-position: -5px -5px; }
+.tw { background-position: -59px -5px; }
+.vk { background-position: -113px -5px; }
 
-.tw {
-  background-position: -59px -5px; }
-
-.vk {
-  background-position: -113px -5px; }
 
 /*------------- Общие классы ------------*/
+
 /* Hide visually and from screen readers */
 .hidden {
-  display: none !important; }
+    display: none !important;
+}
 
 /* Hide only visually, but have it available for screen readers */
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 /* спрятать текст, который нужен лишь для семантики */
 .texthidden {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
-  color: transparent; }
+  color: transparent;
+}
 
 /* ClearFix */
 .clearfix:before, .clearfix:after {
   content: " ";
-  display: table; }
+  display: table;
+}
 
 .clearfix:after {
-  clear: both; }
+ clear: both;
+}

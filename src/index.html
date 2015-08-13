@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>О товаре</title>
     <!-- SEO-->
     <meta name="author" content="">
     <meta name="description" content="">
@@ -18,6 +18,7 @@
     <!-- endbuild-->
     <!-- build:css css/main.min.css-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tovar.css">
     <!-- endbuild-->
     <!-- Fonts-->
     <!-- build:css fonts/fonts.min.css-->
@@ -33,22 +34,50 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="wrapper">
-      <div class="main-content">
-        <header class="header">
-          <div class="container"></div>
-        </header>
-        <div class="container">
-          <aside class="sidebar"></aside>
-          <section class="variable-content">
-            <h1>Заготовка веб-проекта</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati rem, consequuntur illum atque sint hic quidem dolores neque facilis eaque, earum error vitae quis, eligendi tempore? Et, optio, id!</p>
-          </section>
+      <header class="header">
+        <div class="top-line">
+          <div class="container">
+            <div class="top-buttons">
+              <ul class="top-buttons__list">
+                <li class="top-buttons__item"><a href="#" target="_blank" class="top-buttons__link vk-mini"><span class="visuallyhidden">ВКонтакте</span></a></li>
+                <li class="top-buttons__item"><a href="#" target="_blank" class="top-buttons__link fb-mini"><span class="visuallyhidden">Facebook</span></a></li>
+                <li class="top-buttons__item"><a href="#" target="_blank" class="top-buttons__link tw-mini"><span class="visuallyhidden">Twitter</span></a></li>
+              </ul>
+            </div>
+            <div class="top-geo">г. Москва, ул. Новая 246, офис 214</div>
+            <div class="top-phone"><a href="tel:+79213221232" class="top-phone__link"><span class="top-phone__prefix">+7 (921)</span><span class="top-phone__number">322 12 32</span></a></div>
+          </div>
         </div>
-      </div>
+        <div class="search-line">
+          <div class="container"><a href="#" class="logo-main"><img src="img/logo-main.png" alt="Логотип ЭпплShop"><span class="visuallyhidden">Логотип ЭпплShop</span></a>
+            <input type="text" name="search" id="search" placeholder="iMac 27 дюймов" class="search-line__input"><a href="#" class="search-line__link">Карта проезда</a><a href="#" class="search-line__link">История заказов</a><a href="#" class="search-line__link basket">Корзина</a>
+          </div>
+        </div>
+      </header>
+      <nav class="menu">
+        <div class="container">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Мобильные телефоны</a></li>
+            <li class="menu__item current"><a href="#" class="menu__link">Планшеты</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Mp3 плееры</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Персональные компьютеры</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Ноутбуки</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Apple TV</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Аксессуары</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="container">
+          <nav class="menu-point"><a href="#" class="menu-point__link">Главная</a><span>></span><a href="#" class="menu-point__link">Каталог</a><span>> iPad Air Wi-Fi + Cellular 128GB - Silver</span></nav>
+          <h1>Название товара</h1>
+          <p>Описание:</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati rem, consequuntur illum atque sint hic quidem dolores neque facilis eaque, earum error vitae quis, eligendi tempore? Et, optio, id!</p>
+        </div>
+      </main>
     </div>
     <footer class="footer">
-      <div class="footer-container">
-        <div class="logo-white"><a href="#"><img src="img/logo-white.png" alt="Логотип ЭпплShop"><span class="visuallyhidden">Логотип ЭпплShop</span></a></div>
+      <div class="container"><a href="#" class="logo-white"><img src="img/logo-white.png" alt="Логотип ЭпплShop"><span class="visuallyhidden">Логотип ЭпплShop</span></a>
         <nav class="map">
           <div class="map__column">
             <h3 class="map__header">О магазине</h3>
@@ -80,13 +109,13 @@
         </nav>
         <div class="buttons">
           <ul class="buttons__list">
-            <li class="buttons__item"><a href="#" class="buttons__store-link apple texthidden">Доступно в AppStore</a></li>
-            <li class="buttons__item"><a href="#" class="buttons__store-link google texthidden">Доступно в GooglePlay</a></li>
+            <li class="buttons__item"><a href="#" class="buttons__store-link apple"><span class="visuallyhidden">Доступно в AppStore</span></a></li>
+            <li class="buttons__item"><a href="#" class="buttons__store-link google"><span class="visuallyhidden">Доступно в GooglePlay</span></a></li>
           </ul>
           <ul class="buttons__list">
-            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link vk texthidden">ВКонтакте</a></li>
-            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link fb texthidden">Facebook</a></li>
-            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link tw texthidden">Twitter</a></li>
+            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link vk"><span class="visuallyhidden">ВКонтакте</span></a></li>
+            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link fb"><span class="visuallyhidden">Facebook</span></a></li>
+            <li class="buttons__item"><a href="#" target="_blank" class="buttons__social-link tw"><span class="visuallyhidden">Twitter</span></a></li>
           </ul>
         </div>
       </div>

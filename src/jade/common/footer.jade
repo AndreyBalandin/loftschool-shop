@@ -1,9 +1,8 @@
 footer.footer
-  .footer-container
-    .logo-white
-      a(href="#")
-        img(src="img/logo-white.png", alt="Логотип ЭпплShop")
-        span.visuallyhidden Логотип ЭпплShop
+  .container
+    a.logo-white(href="#")
+      img(src="img/logo-white.png", alt="Логотип ЭпплShop")
+      span.visuallyhidden Логотип ЭпплShop
     nav.map
       .map__column
         h3.map__header О магазине
@@ -29,13 +28,13 @@ footer.footer
     .buttons
       //- кнопки доступности товара в магазине
       ul.buttons__list
-        li.buttons__item: a.buttons__store-link.apple.texthidden(href="#") Доступно в AppStore
-        li.buttons__item: a.buttons__store-link.google.texthidden(href="#") Доступно в GooglePlay
+        li.buttons__item: a.buttons__store-link.apple(href="#"): span.visuallyhidden Доступно в AppStore
+        li.buttons__item: a.buttons__store-link.google(href="#"): span.visuallyhidden Доступно в GooglePlay
       //- социальные кнопки
       ul.buttons__list
-        li.buttons__item: a.buttons__social-link.vk.texthidden(href="#", target="_blank") ВКонтакте
-        li.buttons__item: a.buttons__social-link.fb.texthidden(href="#", target="_blank") Facebook
-        li.buttons__item: a.buttons__social-link.tw.texthidden(href="#", target="_blank") Twitter
+        li.buttons__item: a.buttons__social-link.vk(href="#", target="_blank"): span.visuallyhidden ВКонтакте
+        li.buttons__item: a.buttons__social-link.fb(href="#", target="_blank"): span.visuallyhidden Facebook
+        li.buttons__item: a.buttons__social-link.tw(href="#", target="_blank"): span.visuallyhidden Twitter
 
 
 // Javascript
