@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* стили для about-store.jade */
+.about-store {
+  margin-bottom: 60px; }
+
+.about-store__header {
+  font-family: "Elektra Light Pro Bold";
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 12px 0; }
+
+.about-store__column {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-left: 40px;
+  line-height: 1.3em;
+  font-family: "Elektra Light Pro";
+  font-size: 15px;
+  font-weight: normal; }
+  .about-store__column:first-child {
+    margin-left: 0; }

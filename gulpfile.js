@@ -98,7 +98,7 @@ gulp.task('useref', function () {
 // перенести шрифты
 gulp.task('fonts', function() {
   gulp.src('src/fonts/*')
-    .pipe(filter(['*.eot','*.svg','*.ttf','*.woff','*.woff2']))
+    .pipe(filter(['*.otf','*.eot','*.svg','*.ttf','*.woff','*.woff2']))
     .pipe(gulp.dest('dist/fonts'))
 });
 

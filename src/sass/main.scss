@@ -48,7 +48,7 @@ body {
 /*-------------- top-line --------------*/
 .top-line {
   position: relative;
-  height: 40px;
+  height: 41px;
   background: #434a52;
   text-align: center;
 }
@@ -130,7 +130,7 @@ body {
 /*-------------- search-line --------------*/
 .search-line {
   position: relative;
-  line-height: 100px;
+  line-height: 98px;
   background: #edf2f8;
 }
 
@@ -194,6 +194,10 @@ body {
   text-decoration: none;
   color: inherit;
   //font-size: 15px;
+  &:hover {
+    color: #613993;
+  }
+
 }
 
 

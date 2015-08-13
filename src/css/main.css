@@ -37,7 +37,7 @@ body {
 /*-------------- top-line --------------*/
 .top-line {
   position: relative;
-  height: 40px;
+  height: 41px;
   background: #434a52;
   text-align: center; }
 
@@ -111,7 +111,7 @@ body {
 /*-------------- search-line --------------*/
 .search-line {
   position: relative;
-  line-height: 100px;
+  line-height: 98px;
   background: #edf2f8; }
 
 .search-line .logo-main {
@@ -168,6 +168,8 @@ body {
 .menu__link {
   text-decoration: none;
   color: inherit; }
+  .menu__link:hover {
+    color: #613993; }
 
 /*------------------------------------*/
 /*-------------- footer --------------*/

@@ -1,0 +1,56 @@
+/* стили для страницы с товаром */
+$header-color: #00b9fe;
+
+.menu-point {
+  line-height: 60px;
+}
+
+.menu-point__link {
+  color: #00b9fe;
+  &:hover {
+    color: #613993;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.product {
+  margin-bottom: 65px;
+}
+
+.product-slider {
+  float: left;
+  width: 298px;
+  height: 335px;
+  border: 1px solid;
+}
+
+.product-info {
+  float: right;
+  width: 670px;
+}
+
+.product-info__header {
+  font-family: "Elektra Light Pro Bold";
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 25px 0;
+  color: $header-color;
+}
+
+.product-info__row:nth-of-type(even) {
+  background-color: #eef1f4;
+}
+
+.product-info__sell {
+  padding: 10px 5px 4px 10px;
+  &.key {
+    min-width: 230px;
+    max-width: 325px;
+  }
+  &.value {
+    min-width: 180px;
+    max-width: 315px;
+  }
+}

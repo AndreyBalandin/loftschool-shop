@@ -1,21 +1,38 @@
+//- страница с описанием конкретного товара
+
 extends ../layouts/main_layout.jade
 
 block title
-  title О товаре
+  title iPad Air Wi-Fi + Cellular 128GB - Silver
 
 block menu_current
   - var menu_current = 'Планшеты';
 
 block content
+  - var product_name = 'iPad Air Wi-Fi + Cellular 128GB - Silver';
+  - var product_props = { 'Артикул': '42787825', 'Опция': 'включена', 'Цвет': 'серебристый', 'Размер': '1280*1245*90', 'Вес': '200 г', 'Тактовая частота': '1,6 Ггц', 'Количество ядер': '2', 'Гарантия': '2 года'};
+
   main.main
     .container
-      //- строка с текущей точкой каталога товаров
+      //- строка с текущей точкой в каталоге товаров
       nav.menu-point
         a.menu-point__link(href="#") Главная
-        span >
+        <span> > </span>
         a.menu-point__link(href="#") Каталог
-        span > iPad Air Wi-Fi + Cellular 128GB - Silver
+        <span> > </span>
+        span= product_name
 
-      h1 Название товара
-      p Описание:
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt obcaecati rem, consequuntur illum atque sint hic quidem dolores neque facilis eaque, earum error vitae quis, eligendi tempore? Et, optio, id!
+      //- описание товара со слайдером и таблицей характеристик
+      .product.clearfix
+        .product-slider Slider
+        .product-info
+          h1.product-info__header= product_name
+          table.product-info__table
+            tbody
+              each val, key in product_props
+                tr.product-info__row
+                  td.product-info__sell.key= key
+                  td.product-info__sell.value= val
+
+      //- вставка с информацией о магазине
+      include ../common/about-store.jade

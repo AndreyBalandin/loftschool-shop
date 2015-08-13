@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* стили для страницы с товаром */
+.menu-point {
+  line-height: 60px; }
+
+.menu-point__link {
+  color: #00b9fe; }
+  .menu-point__link:hover {
+    color: #613993; }
+  .menu-point__link:first-child {
+    padding-left: 0; }
+
+.product {
+  margin-bottom: 65px; }
+
+.product-slider {
+  float: left;
+  width: 298px;
+  height: 335px;
+  border: 1px solid; }
+
+.product-info {
+  float: right;
+  width: 670px; }
+
+.product-info__header {
+  font-family: "Elektra Light Pro Bold";
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 25px 0;
+  color: #00b9fe; }
+
+.product-info__row:nth-of-type(even) {
+  background-color: #eef1f4; }
+
+.product-info__sell {
+  padding: 10px 5px 4px 10px; }
+  .product-info__sell.key {
+    min-width: 230px;
+    max-width: 325px; }
+  .product-info__sell.value {
+    min-width: 180px;
+    max-width: 315px; }
