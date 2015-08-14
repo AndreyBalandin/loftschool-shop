@@ -17,8 +17,8 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  /* минимальная ширина на 10 пикселей шире контейнера */
-  min-width: 1010px;
+  /* минимальная ширина на 6 пикселей шире контейнера */
+  min-width: 1006px;
   height: auto !important;
   overflow: hidden; }
 
@@ -141,7 +141,7 @@ body {
   color: #00b9fe; }
   .search-line__link:hover {
     color: #613993; }
-  .search-line__link.basket {
+  .search-line__link.basket-icon {
     background: url("../img/basket.png") no-repeat left;
     padding: 5px 0 1px 30px; }
 
