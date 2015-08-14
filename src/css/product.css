@@ -3,12 +3,20 @@
 .menu-point {
   line-height: 60px; }
 
+.menu-point__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.menu-point__item {
+  display: inline-block; }
+  .menu-point__item + .menu-point__item:before {
+    content: " > "; }
+
 .menu-point__link {
   color: #00b9fe; }
   .menu-point__link:hover {
     color: #613993; }
-  .menu-point__link:first-child {
-    padding-left: 0; }
 
 .product {
   margin-bottom: 65px; }

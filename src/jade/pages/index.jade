@@ -16,11 +16,12 @@ block content
     .container
       //- строка с текущей точкой в каталоге товаров
       nav.menu-point
-        a.menu-point__link(href="#") Главная
-        <span> > </span>
-        a.menu-point__link(href="#") Каталог
-        <span> > </span>
-        span= product_name
+        ul.menu-point__list
+          li.menu-point__item
+            a.menu-point__link(href="#") Главная
+          li.menu-point__item
+            a.menu-point__link(href="#") Каталог
+          li.menu-point__item= product_name
 
       //- описание товара со слайдером и таблицей характеристик
       .product.clearfix

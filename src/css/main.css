@@ -158,16 +158,17 @@ body {
 
 .menu__item {
   display: inline-block;
-  margin-left: 4px;
   color: #5c7b98; }
-  .menu__item:first-child {
-    margin-left: 0; }
   .menu__item.current {
     color: #f7f7f7; }
+  .menu__item + .menu__item:before {
+    content: " | ";
+    color: #edf2f8; }
 
 .menu__link {
   text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  padding: 5px; }
   .menu__link:hover {
     color: #613993; }
 

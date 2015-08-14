@@ -180,19 +180,24 @@ body {
 
 .menu__item {
   display: inline-block;
-  margin-left: 4px;
-  &:first-child {
-    margin-left: 0;
-  }
+  // margin-left: 4px;
+  // &:first-child {
+  //   margin-left: 0;
+  // }
   color: $text-color;
   &.current {
     color: #f7f7f7;
+  }
+  .menu__item + &:before {
+    content: " | ";
+    color: #edf2f8;
   }
 }
 
 .menu__link {
   text-decoration: none;
   color: inherit;
+  padding: 5px;
   //font-size: 15px;
   &:hover {
     color: #613993;
