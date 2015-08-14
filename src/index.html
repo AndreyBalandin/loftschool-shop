@@ -19,6 +19,7 @@
     <!-- build:css css/main.min.css-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/about-store.css">
     <!-- endbuild-->
     <!-- Fonts-->
@@ -72,7 +73,14 @@
         <div class="container">
           <nav class="menu-point"><a href="#" class="menu-point__link">Главная</a><span> > </span><a href="#" class="menu-point__link">Каталог</a><span> > </span><span>iPad Air Wi-Fi + Cellular 128GB - Silver</span></nav>
           <div class="product clearfix">
-            <div class="product-slider">Slider</div>
+            <div class="product-slider">
+              <div class="product-slider__display"><img src="img/product/1.jpg" alt="Product's photo"></div>
+              <ul class="product-slider__list">
+                <li class="product-slider__item active"><a href="#" class="product-slider__pic"><img src="img/product/1.jpg" alt="Product's photo"></a></li>
+                <li class="product-slider__item"><a href="#" class="product-slider__pic"><img src="img/product/2.jpg" alt="Product's photo"></a></li>
+                <li class="product-slider__item"><a href="#" class="product-slider__pic"><img src="img/product/3.jpg" alt="Product's photo"></a></li>
+              </ul>
+            </div>
             <div class="product-info">
               <h1 class="product-info__header">iPad Air Wi-Fi + Cellular 128GB - Silver</h1>
               <table class="product-info__table">
@@ -170,10 +178,10 @@
     </footer>
     <!-- Javascript-->
     <!-- build:js js/vendor.js-->
-    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery/dist/jquery.min.js"></script>
     <!-- endbuild-->
     <!-- build:js js/main.js-->
-    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
     <!-- endbuild-->
   </body>
 </html>

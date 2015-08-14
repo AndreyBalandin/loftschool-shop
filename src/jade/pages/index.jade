@@ -24,7 +24,9 @@ block content
 
       //- описание товара со слайдером и таблицей характеристик
       .product.clearfix
-        .product-slider Slider
+        .product-slider
+          //- вставка со слайдером
+          include ../common/slider.jade
         .product-info
           h1.product-info__header= product_name
           table.product-info__table
