@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/about-store.css">
+    <link rel="stylesheet" href="css/basket.css">
     <!-- endbuild-->
     <!-- Fonts-->
     <!-- build:css fonts/fonts.min.css-->
@@ -53,7 +54,7 @@
         </div>
         <div class="search-line">
           <div class="container"><a href="#" class="logo-main"><img src="img/logo-main.png" alt="Логотип ЭпплShop"><span class="visuallyhidden">Логотип ЭпплShop</span></a>
-            <input type="text" name="search" id="search" placeholder="iMac 27 дюймов" class="search-line__input"><a href="#" class="search-line__link">Карта проезда</a><a href="#" class="search-line__link">История заказов</a><a href="#" class="search-line__link basket">Корзина</a>
+            <input type="text" name="search" id="search" placeholder="iMac 27 дюймов" class="search-line__input"><a href="#" class="search-line__link">Карта проезда</a><a href="#" class="search-line__link">История заказов</a><a id="basket" href="#" class="search-line__link basket-icon">Корзина</a>
           </div>
         </div>
       </header>
@@ -194,7 +195,9 @@
     <script src="bower/jquery/dist/jquery.min.js"></script>
     <!-- endbuild-->
     <!-- build:js js/main.js-->
+    <script src="js/scrollup.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/basket.js"></script>
     <!-- endbuild-->
   </body>
 </html>

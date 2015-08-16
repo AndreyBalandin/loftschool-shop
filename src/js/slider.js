@@ -4,7 +4,7 @@
 var slider = (function (){
 
   var init = function() {
-      console.log('Инициализация модуля slider.js');
+      // console.log('Инициализация модуля slider.js');
       _setUpListners();
   };
 

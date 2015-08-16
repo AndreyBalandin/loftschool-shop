@@ -1,0 +1,39 @@
+/* стили для выпадающего меню со списком товаров в корзине */
+
+#basket__wrap {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  max-width: 245px;
+}
+
+.basket__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.basket__pic {
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.basket__item {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.basket__link {
+  font-size: 13px;
+  line-height: 1.4em;
+  color: #00b9fe;
+  &:hover {
+    color: #613993;
+  }
+}
+
+.background-color-gray {
+  background-color: #f8f9fa;
+}
