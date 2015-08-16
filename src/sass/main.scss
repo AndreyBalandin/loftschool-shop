@@ -1,5 +1,6 @@
 $text-color: #5c7b98;
 $footer-background: #613993 url("../img/pattern.png");
+$search-line-background: #edf2f8;
 $menu-background: #00b9fe;
 
 
@@ -131,7 +132,7 @@ body {
 .search-line {
   position: relative;
   line-height: 98px;
-  background: #edf2f8;
+  background: $search-line-background;
 }
 
 .search-line .logo-main {
@@ -163,46 +164,6 @@ body {
     background: url("../img/basket.png") no-repeat left;
     padding: 5px 0 1px 30px;
   }
-}
-
-/*-------------- menu --------------*/
-.menu {
-  position: relative;
-  line-height: 40px;
-  background: $menu-background;
-}
-
-.menu__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu__item {
-  display: inline-block;
-  // margin-left: 4px;
-  // &:first-child {
-  //   margin-left: 0;
-  // }
-  color: $text-color;
-  &.current {
-    color: #f7f7f7;
-  }
-  .menu__item + &:before {
-    content: " | ";
-    color: #edf2f8;
-  }
-}
-
-.menu__link {
-  text-decoration: none;
-  color: inherit;
-  padding: 5px;
-  //font-size: 15px;
-  &:hover {
-    color: #613993;
-  }
-
 }
 
 

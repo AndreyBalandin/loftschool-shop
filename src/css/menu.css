@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*-------------- menu --------------*/
+.menu {
+  position: relative;
+  line-height: 40px;
+  background-color: #00b9fe; }
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.menu__item {
+  display: inline-block;
+  vertical-align: top;
+  color: #5c7b98; }
+  .menu__item.current {
+    color: #f7f7f7; }
+
+.menu__link {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 4px 0 8px; }
+  .menu__link:hover {
+    color: #613993; }
+
+/* обертка нужна, чтобы выставить нужный фон для стрелок */
+.arrow__wrap {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #edf2f8; }
+
+.arrow, .arrow__in, .arrow__out {
+  display: inline-block;
+  vertical-align: top;
+  width: 0;
+  height: 0; }
+
+.arrow__in {
+  border-top: 20px solid #00b9fe;
+  border-bottom: 20px solid #00b9fe;
+  border-left: 15px solid transparent;
+  border-right: none;
+  margin-left: -13px; }
+
+.arrow__out {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 15px solid #00b9fe;
+  border-right: none;
+  margin-left: 0px; }

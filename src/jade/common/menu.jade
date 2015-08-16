@@ -1,13 +1,17 @@
 block menu_current
+
 - var menu = { 'Мобильные телефоны': '#', 'Планшеты': '#', 'Mp3 плееры': '#', 'Персональные компьютеры': '#', 'Ноутбуки': '#', 'Apple TV': '#', 'Аксессуары': '#'};
+- var last_item = 'Аксессуары';
 
 nav.menu
   .container
     ul.menu__list
-      each val, key in menu
+      for val, key in menu
         if menu_current === key
-          li.menu__item.current
-            a.menu__link(href=val)= key
+          li.menu__item.current: a.menu__link(href=val)= key
         else
-          li.menu__item
-            a.menu__link(href=val)= key
+          li.menu__item: a.menu__link(href=val)= key
+        if key !== last_item
+          .arrow__wrap
+            span.arrow__out
+            span.arrow__in

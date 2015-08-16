@@ -145,33 +145,6 @@ body {
     background: url("../img/basket.png") no-repeat left;
     padding: 5px 0 1px 30px; }
 
-/*-------------- menu --------------*/
-.menu {
-  position: relative;
-  line-height: 40px;
-  background: #00b9fe; }
-
-.menu__list {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.menu__item {
-  display: inline-block;
-  color: #5c7b98; }
-  .menu__item.current {
-    color: #f7f7f7; }
-  .menu__item + .menu__item:before {
-    content: " | ";
-    color: #edf2f8; }
-
-.menu__link {
-  text-decoration: none;
-  color: inherit;
-  padding: 5px; }
-  .menu__link:hover {
-    color: #613993; }
-
 /*------------------------------------*/
 /*-------------- footer --------------*/
 /*------------------------------------*/

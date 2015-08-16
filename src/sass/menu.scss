@@ -1,0 +1,67 @@
+/*-------------- menu --------------*/
+$text-color: #5c7b98;
+$search-line-background: #edf2f8;
+$menu-background: #00b9fe;
+$menu-height: 40px;
+
+.menu {
+  position: relative;
+  line-height: $menu-height;
+  background-color: $menu-background;
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item {
+  display: inline-block;
+  vertical-align: top;
+  color: $text-color;
+  &.current {
+    color: #f7f7f7;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 4px 0 8px;
+  &:hover {
+    color: #613993;
+  }
+}
+
+/* обертка нужна, чтобы выставить нужный фон для стрелок */
+.arrow__wrap {
+  display: inline-block;
+  vertical-align: top;
+  background-color: $search-line-background;
+}
+
+.arrow {
+  display: inline-block;
+  vertical-align: top;
+  width: 0;
+  height: 0;
+}
+
+.arrow__in {
+  @extend .arrow;
+  border-top: $menu-height/2 solid $menu-background;
+  border-bottom: $menu-height/2 solid $menu-background;
+  border-left: 15px solid transparent;
+  border-right: none;
+  margin-left: -13px;
+}
+
+.arrow__out {
+  @extend .arrow;
+  border-top: $menu-height/2 solid transparent;
+  border-bottom: $menu-height/2 solid transparent;
+  border-left: 15px solid $menu-background;
+  border-right: none;
+  margin-left: 0px;
+}
