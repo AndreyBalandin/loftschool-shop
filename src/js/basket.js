@@ -8,7 +8,7 @@ var basket = (function (){
       wrap;                    // обертка для списка товаров
 
   var init = function() {
-      console.log('Инициализация модуля basket.js');
+      // console.log('Инициализация модуля basket.js');
       _createWrap();
       _setUpListners();
   };
