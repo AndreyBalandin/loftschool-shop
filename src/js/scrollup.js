@@ -3,7 +3,9 @@
 
 var scrollup = (function (){
 
-  var scrollup;  // элемент с кнопкой 'Наверх'
+  var scrollup,  // элемент с кнопкой 'Наверх'
+      bottomGap = 10,  // отступ снизу для кнопки
+      maxPos = $(document).height() - $('.footer').outerHeight();
 
   var init = function() {
       // console.log('Инициализация модуля scrollup.js');
@@ -32,8 +34,14 @@ var scrollup = (function (){
   // установка обработчиков событий
   var _setUpListners = function () {
 
-    // если находимся не вверху, то показать кнопку
+    // если находимся не вверху, то показать кнопку, не залезая на футер
     $(window).on('scroll', function(){
+      var curPos = $(window).scrollTop() + $(window).height();
+      if (curPos > maxPos) {
+          scrollup.css('bottom', curPos - maxPos + bottomGap);
+      } else {
+          scrollup.css('bottom', bottomGap);
+      };
       if ($(this).scrollTop() != 0) {
         scrollup.fadeIn();
       } else {
