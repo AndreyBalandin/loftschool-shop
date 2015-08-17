@@ -22,7 +22,7 @@ var basket = (function (){
           // получили объект с содержимым корзины из запроса или другим способом
           basketArray = [ {name: 'iPhone 6', src: 'img/basket/basket-iphone6.png', url: '#'},
                           {name: 'iPad Air Wi-Fi + Cellular 128GB - Silver', src: 'img/basket/basket-ipad.png', url: '#'},
-                          {name: 'Macbook Air', src: 'img/basket/basket-macbook.png', url: '#'},
+                          {name: 'Macbook Air', src: 'img/basket/basket-macbook.png', url: '#'}
                         ];
 
       // сверстать таблицу со списком товаров в корзине
