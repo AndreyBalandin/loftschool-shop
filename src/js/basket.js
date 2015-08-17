@@ -5,6 +5,7 @@ var basket = (function (){
 
   // переменные модуля для ускорения работы с DOM
   var basket = $('#basket'),   // элемент с корзиной
+      listItem = basket.parent(), // пункт меню, относительно которого будем располагать список товаров
       wrap;                    // обертка для списка товаров
 
   var init = function() {
@@ -39,12 +40,6 @@ var basket = (function (){
 
       // добавить новый элемент в документ
       wrap = $(markup).appendTo('body');
-
-      // вычислить и установить положение элемента со списком товаров
-      var wrap_offset = basket.offset();
-      wrap_offset.top += basket.outerHeight();
-      wrap_offset.left -= wrap.outerWidth() - basket.outerWidth();
-      wrap.offset(wrap_offset);
   };
 
 
@@ -54,17 +49,37 @@ var basket = (function (){
       // по клику показать список товаров корзине
       basket.on('click', function(event) {
           event.preventDefault();
+          listItem.toggleClass('active');
           wrap.toggle();
+          _setWrapOffset();
           event.stopPropagation();
       });
 
       // клик по документу за пределами корзины закрывает список
       $(document).on('click', function(event) {
           if (wrap.is(':visible') && !$(event.target).closest(wrap).length) {
+              listItem.removeClass('active');
               wrap.hide();
           };
       });
+
+      // если изменились размеры окна, то пересчитать положение элемента со списком товаров
+      $(window).on('resize', function(){
+          _setWrapOffset();
+      });
   };
+
+
+  // вычислить и установить положение элемента со списком товаров
+  var _setWrapOffset = function () {
+      if (wrap.is(':visible')) {
+        var wrap_offset = listItem.offset();
+        wrap_offset.top += listItem.outerHeight();
+        wrap_offset.left -= wrap.outerWidth() - listItem.outerWidth();
+        wrap.offset(wrap_offset);
+      };
+  };
+
 
   return {
     init: init

@@ -17,6 +17,10 @@ header.header
         img(src="img/logo-main.png", alt="Логотип ЭпплShop")
         span.visuallyhidden Логотип ЭпплShop
       input.search-line__input(type="text", name="search", id="search" placeholder="iMac 27 дюймов")
-      a.search-line__link(href="#") Карта проезда
-      a.search-line__link(href="#") История заказов
-      a.search-line__link.basket-icon#basket(href="#") Корзина
+      ul.search-line__list
+        li.search-line__item
+          a.search-line__link(href="#") Карта проезда
+        li.search-line__item
+          a.search-line__link(href="#") История заказов
+        li.search-line__item
+          a.search-line__link.icon-basket#basket(href="#") Корзина (3)

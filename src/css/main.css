@@ -122,8 +122,9 @@ body {
 .search-line__input {
   margin-left: 258px;
   border: 0;
-  padding: 10px 8px;
+  padding: 0 8px;
   width: 323px;
+  line-height: 35px;
   font-size: 16px; }
 
 *::-webkit-input-placeholder {
@@ -135,15 +136,28 @@ body {
 *:-ms-input-placeholder {
   color: #edf2f8; }
 
+.search-line__list {
+  display: inline-block;
+  line-height: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px; }
+
+.search-line__item {
+  display: inline-block;
+  padding: 0 12px; }
+  .search-line__item.active {
+    background-color: #ffffff; }
+
 .search-line__link {
-  margin-left: 27px;
   font-size: 13px;
   color: #00b9fe; }
   .search-line__link:hover {
     color: #613993; }
-  .search-line__link.basket-icon {
+  .search-line__link.icon-basket {
     background: url("../img/basket.png") no-repeat left;
-    padding: 5px 0 1px 30px; }
+    padding: 5px 0px 1px 30px; }
 
 /*------------------------------------*/
 /*-------------- footer --------------*/
