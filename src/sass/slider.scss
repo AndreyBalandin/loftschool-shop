@@ -1,5 +1,11 @@
-.product-slider__display {
-  width: 298px;
+// стили для слайдера
+
+.slider {
+  position: relative;
+}
+
+.slider__display {
+  width: 300px;
   height: 238px;
   margin-bottom: 22px;
   position: relative;
@@ -11,29 +17,35 @@
   }
 }
 
-.product-slider__list {
+.slider__list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
+  width: 239px;
+  height: 77px;
+  overflow: hidden;
 }
 
-.product-slider__item {
-  display: inline-block;
-  margin-left: 5px;
+.slider__item {
+  display: none;
+  margin-left: 0px;
   border: 1px dashed #eef1f4;
   &:first-child {
     margin-left: 0;
   }
-  &.active {
+  &.slider__display-slide {
     border: 1px solid #eef1f4;
   }
   &:hover {
     border: 1px solid #5c7b98;;
   }
+  &.slider__active-slide {
+    display: inline-block;
+  }
 }
 
-.product-slider__pic {
+.slider__pic {
   display: block;
   width: 75px;
   height: 75px;
@@ -45,5 +57,60 @@
     max-height: 75px;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
+  }
+}
+
+.slider__controls {
+  height: 34px;
+  width: 15px;
+  background-color: #00b9fe;
+  color: #fff;
+  font-family: 'Elektra Medium Pro';
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  opacity: 0.5;
+
+  &.slider__controls-next {
+    padding: 5px 0 0 5px;
+    right: 10px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      border-left: 10px solid #00b9fe;
+    }
+  }
+
+  &.slider__controls-prev {
+    padding: 5px 5px 0 0;
+    left: 10px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      border-top: 17px solid transparent;
+      border-bottom: 17px solid transparent;
+      border-right: 10px solid #00b9fe;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.disabled {
+    opacity: 0.1;
   }
 }

@@ -1,14 +1,23 @@
 //- слайдер с фотографиями продукта
 
-.product-slider__display
-  img(src="img/product/1.jpg", alt="Product's photo")
-ul.product-slider__list
-  li.product-slider__item.active
-    a.product-slider__pic(href="#")
-      img(src="img/product/1.jpg", alt="Product's photo")
-  li.product-slider__item
-    a.product-slider__pic(href="#")
-      img(src="img/product/2.jpg", alt="Product's photo")
-  li.product-slider__item
-    a.product-slider__pic(href="#")
-      img(src="img/product/3.jpg", alt="Product's photo")
+.slider
+  .slider__display
+    img(src="img/product/1.jpg", alt="Product's photo")
+  ul.slider__list
+    li.slider__item.slider__active-slide.slider__display-slide
+      a.slider__pic(href="#")
+        img(src="img/product/1.jpg", alt="Product's photo")
+    li.slider__item.slider__active-slide
+      a.slider__pic(href="#")
+        img(src="img/product/2.jpg", alt="Product's photo")
+    li.slider__item.slider__active-slide
+      a.slider__pic(href="#")
+        img(src="img/product/3.jpg", alt="Product's photo")
+    li.slider__item
+      a.slider__pic(href="#")
+        img(src="img/product/4.jpg", alt="Product's photo")
+    li.slider__item
+      a.slider__pic(href="#")
+        img(src="img/product/5.jpg", alt="Product's photo")
+  button.slider__controls.slider__controls-prev.disabled(disabled="disabled") <
+  button.slider__controls.slider__controls-next >
