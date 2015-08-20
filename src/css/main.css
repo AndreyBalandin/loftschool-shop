@@ -25,8 +25,8 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  /* минимальная ширина на 6 пикселей шире контейнера */
-  min-width: 1006px;
+  /* минимальная ширина на 10 пикселей шире контейнера */
+  min-width: 1010px;
   height: auto !important;
   overflow: hidden; }
 
@@ -37,7 +37,9 @@ body {
 
 .footer {
   height: 228px;
-  margin-top: -228px; }
+  margin-top: -228px;
+  /* минимальная ширина на 10 пикселей шире контейнера */
+  min-width: 1010px; }
 
 /*------------------------------------*/
 /*-------------- header --------------*/
