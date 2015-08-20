@@ -43,9 +43,9 @@ var scrollup = (function (){
           scrollup.css('bottom', bottomGap);
       };
       if ($(this).scrollTop() != 0) {
-        scrollup.fadeIn();
+        scrollup.stop(true, true).fadeIn();
       } else {
-        scrollup.fadeOut();
+        scrollup.stop(true, true).fadeOut();
       }
     });
 
