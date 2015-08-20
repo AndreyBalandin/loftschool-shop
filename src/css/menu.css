@@ -1,51 +1,44 @@
-@charset "UTF-8";
 /*-------------- menu --------------*/
 .menu {
-  position: relative;
-  line-height: 40px;
-  background-color: #00b9fe; }
+  background: #f7f7f7;
+  border-bottom: 1px solid #e3e3e3; }
+  .menu .container {
+    text-align: center; }
 
 .menu__list {
+  display: inline-block;
+  vertical-align: top;
   list-style: none;
   margin: 0;
   padding: 0; }
 
 .menu__item {
-  display: inline-block;
-  vertical-align: top;
-  color: #5c7b98; }
+  float: left;
+  background: url("../img/menu-div.png") right 0 no-repeat;
+  height: 40px;
+  padding: 0 25px 0 10px; }
+  .menu__item.menu__item_last {
+    background-image: none; }
   .menu__item.current {
-    color: #f7f7f7; }
+    background: url("../img/menu-current.png") right 0 no-repeat;
+    padding-right: 0px; }
+    .menu__item.current .menu__link {
+      background: url("../img/menu-current.png") 0 0 no-repeat;
+      position: relative;
+      left: -25px;
+      padding-left: 25px;
+      color: #f7f7f7; }
+  .menu__item:not(.current):hover {
+    background: url("../img/menu-hover.png") right 0 no-repeat;
+    padding-right: 0; }
+    .menu__item:not(.current):hover .menu__link {
+      background: url("../img/menu-hover.png") 0 0 no-repeat;
+      position: relative;
+      left: -25px;
+      padding-left: 25px; }
 
 .menu__link {
-  text-decoration: none;
+  display: block;
+  line-height: 40px;
   color: inherit;
-  padding: 0 4px 0 8px; }
-  .menu__link:hover {
-    color: #613993; }
-
-/* обертка нужна, чтобы выставить нужный фон для стрелок */
-.arrow__wrap {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #edf2f8; }
-
-.arrow, .arrow__in, .arrow__out {
-  display: inline-block;
-  vertical-align: top;
-  width: 0;
-  height: 0; }
-
-.arrow__in {
-  border-top: 20px solid #00b9fe;
-  border-bottom: 20px solid #00b9fe;
-  border-left: 15px solid transparent;
-  border-right: none;
-  margin-left: -13px; }
-
-.arrow__out {
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 15px solid #00b9fe;
-  border-right: none;
-  margin-left: 0px; }
+  text-decoration: none; }
