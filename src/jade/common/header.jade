@@ -16,7 +16,10 @@ header.header
       a.logo-main(href="#")
         img(src="img/logo-main.png", alt="Логотип ЭпплShop")
         span.visuallyhidden Логотип ЭпплShop
-      input.search-line__input(type="text", name="search", id="search" placeholder="iMac 27 дюймов")
+      .search-line__form
+        form(action="", method="get")
+          input(type="text", placeholder="iMac 27 дюймов").search-line__input
+          input(type="submit", value="Поиск").search-line__submit
       ul.search-line__list
         li.search-line__item
           a.search-line__link(href="#") Карта проезда
