@@ -43,7 +43,8 @@ $menu-height: 40px;
     }
   }
 
-  &:not(.current):hover {
+  // &:not(.current):hover {
+  &:hover {
     background: url("../img/menu-hover.png") right 0 no-repeat;
     padding-right: 0;
 
@@ -52,6 +53,7 @@ $menu-height: 40px;
       position: relative;
       left: -25px;
       padding-left: 25px;
+      color: $text-color;
     }
   }
 }
@@ -59,6 +61,6 @@ $menu-height: 40px;
 .menu__link {
   display: block;
   line-height: 40px;
-  color: inherit;
+  color: $text-color;
   text-decoration: none;
 }

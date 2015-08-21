@@ -4,6 +4,7 @@
   "dependencies": {
     "normalize.css": "~3.0.3",
     "modernizer": "~2.8.2",
-    "jquery": "1"
+    "jquery": "1",
+    "jquery-placeholder": "~2.1.2"
   }
 }

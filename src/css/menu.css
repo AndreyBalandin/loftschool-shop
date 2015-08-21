@@ -28,17 +28,18 @@
       left: -25px;
       padding-left: 25px;
       color: #f7f7f7; }
-  .menu__item:not(.current):hover {
+  .menu__item:hover {
     background: url("../img/menu-hover.png") right 0 no-repeat;
     padding-right: 0; }
-    .menu__item:not(.current):hover .menu__link {
+    .menu__item:hover .menu__link {
       background: url("../img/menu-hover.png") 0 0 no-repeat;
       position: relative;
       left: -25px;
-      padding-left: 25px; }
+      padding-left: 25px;
+      color: #5c7b98; }
 
 .menu__link {
   display: block;
   line-height: 40px;
-  color: inherit;
+  color: #5c7b98;
   text-decoration: none; }
