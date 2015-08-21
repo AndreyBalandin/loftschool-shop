@@ -34,8 +34,8 @@ block content
             tbody
               each val, key in product_props
                 tr.product-info__row
-                  td.product-info__sell.key= key
-                  td.product-info__sell.value= val
+                  td= key
+                  td= val
 
       //- вставка с информацией о магазине
       include ../common/about-store.jade

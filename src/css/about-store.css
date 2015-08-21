@@ -20,3 +20,5 @@
   font-weight: normal; }
   .about-store__column:first-child {
     margin-left: 0; }
+  .about-store__column p {
+    margin: 0; }

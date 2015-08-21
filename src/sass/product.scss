@@ -54,14 +54,8 @@ $text-color: #5c7b98;
   background-color: #eef1f4;
 }
 
-.product-info__sell {
+.product-info__row td {
   padding: 10px 5px 4px 10px;
-  &.key {
-    min-width: 230px;
-    max-width: 325px;
-  }
-  &.value {
-    min-width: 180px;
-    max-width: 315px;
-  }
+  min-width: 200px;
+  max-width: 310px;
 }
