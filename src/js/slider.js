@@ -79,4 +79,7 @@ var slider = (function (){
 
 })();
 
-slider.init();
+// проверить, что есть элементы со слайдером
+if ($('.slider').length) {
+  slider.init();
+};

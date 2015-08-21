@@ -6,7 +6,7 @@ var basket = (function (){
   // переменные модуля для ускорения работы с DOM
   var basket = $('#basket'),   // элемент с корзиной
       listItem = basket.parent(), // пункт меню, относительно которого будем располагать список товаров
-      wrap;                    // обертка для списка товаров
+      wrap = {};                  // обертка для списка товаров
 
   var init = function() {
       // console.log('Инициализация модуля basket.js');
@@ -87,4 +87,7 @@ var basket = (function (){
 
 })();
 
-basket.init();
+// проверить, что на странице есть Корзина
+if ($('#basket').length) {
+  basket.init();
+};

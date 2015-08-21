@@ -3,7 +3,7 @@
 
 var scrollup = (function (){
 
-  var scrollup,  // элемент с кнопкой 'Наверх'
+  var scrollup = {},   // элемент с кнопкой 'Наверх'
       bottomGap = 10,  // отступ снизу для кнопки
       maxPos = $(document).height() - $('.footer').outerHeight();
 
@@ -18,7 +18,7 @@ var scrollup = (function (){
   var _createScrollup = function() {
 
       // добавить новый элемент в документ
-      scrollup = $('<div id="scrollup"></div>').appendTo('body');
+      scrollup = $('<a id="scrollup" href="#"></a>').appendTo('body');
       scrollup.css({ display: 'none',
                      position: 'fixed',
                      bottom: '240px',
@@ -27,7 +27,7 @@ var scrollup = (function (){
                      height: '39px',
                      opacity: 0.5,
                      background: 'url("img/scrollup.png") no-repeat'
-                  });
+      });
   };
 
 
