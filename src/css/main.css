@@ -91,12 +91,12 @@ body {
 .top-line .top-geo {
   display: inline-block;
   max-width: 550px;
-  margin-top: 8px;
+  line-height: 41px;
   color: #ffffff; }
 
 .top-geo {
   background: url("../img/geo.png") no-repeat left;
-  padding: 7px 0 3px 25px;
+  padding-left: 25px;
   font-size: 13px; }
 
 /*---------- top-phone ----------*/
@@ -213,7 +213,8 @@ body {
 .map__column {
   display: inline-block;
   vertical-align: top;
-  margin-left: 70px;
+  width: 140px;
+  margin-left: 20px;
   text-align: left; }
 
 .map__column:first-child {

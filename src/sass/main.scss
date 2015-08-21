@@ -2,6 +2,7 @@ $text-color: #5c7b98;
 $footer-background: #613993 url("../img/pattern.png");
 $search-line-background: #eff4f8; //#edf2f8;
 $menu-background: #00b9fe;
+$top-line-height: 41px;
 
 /* ClearFix */
 .clearfix:before, .clearfix:after {
@@ -59,7 +60,7 @@ body {
 /*-------------- top-line --------------*/
 .top-line {
   position: relative;
-  height: 41px;
+  height: $top-line-height;
   background: #434a52;
   text-align: center;
 }
@@ -105,13 +106,13 @@ body {
 .top-line .top-geo {
   display: inline-block;
   max-width: 550px;
-  margin-top: 8px;
+  line-height: $top-line-height;
   color: #ffffff;
 }
 
 .top-geo {
   background: url("../img/geo.png") no-repeat left;
-  padding: 7px 0 3px 25px;
+  padding-left: 25px;
   font-size: 13px;
 }
 
@@ -245,7 +246,8 @@ body {
 .map__column {
   display: inline-block;
   vertical-align: top;
-  margin-left: 70px;
+  width: 140px;
+  margin-left: 20px;
   text-align: left;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "normalize.css": "~3.0.3",
     "modernizer": "~2.8.2",
