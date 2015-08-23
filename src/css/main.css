@@ -1,5 +1,7 @@
 @charset "UTF-8";
-/* ClearFix */
+/*----- start: @import 'mixins' -----*/
+/* --------- общие классы --------- */
+/* clearfix */
 .clearfix:before, .search-line__form:before, .clearfix:after, .search-line__form:after {
   content: " ";
   display: table; }
@@ -7,6 +9,30 @@
 .clearfix:after, .search-line__form:after {
   clear: both; }
 
+/* hide visually and from screen readers */
+.hidden {
+  display: none !important; }
+
+/* hide only visually, but have it available for screen readers */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* спрятать текст, который нужен лишь для семантики */
+.texthidden {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
+
+/* --------- mixins --------- */
+/*----- end: @import 'mixins' -----*/
 html {
   height: 100%; }
 
@@ -76,16 +102,21 @@ body {
   display: block;
   background: url("../img/sprites-socials-mini.png") no-repeat;
   width: 24px;
-  height: 25px; }
-
-.fb-mini {
-  background-position: -2px -2px; }
-
-.tw-mini {
-  background-position: -30px -2px; }
-
-.vk-mini {
-  background-position: -58px -2px; }
+  height: 25px;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .top-buttons__link:hover {
+    opacity: 0.8; }
+  .top-buttons__link.fb-mini {
+    background-position: -2px -2px; }
+  .top-buttons__link.tw-mini {
+    background-position: -30px -2px; }
+  .top-buttons__link.vk-mini {
+    background-position: -58px -2px; }
 
 /*---------- geo ----------*/
 .top-line .top-geo {
@@ -147,15 +178,14 @@ body {
   line-height: 17px;
   background: #ffffff;
   border: 1px solid #dce6f0; }
-
-*::-webkit-input-placeholder {
-  color: #edf2f8; }
-
-*::-moz-placeholder {
-  color: #edf2f8; }
-
-*:-ms-input-placeholder {
-  color: #edf2f8; }
+  .search-line__input::-webkit-input-placeholder {
+    color: #edf2f8; }
+  .search-line__input:-moz-placeholder {
+    color: #edf2f8; }
+  .search-line__input::-moz-placeholder {
+    color: #edf2f8; }
+  .search-line__input:-ms-input-placeholder {
+    color: #edf2f8; }
 
 .search-line__submit {
   background: #00b9fe;
@@ -253,56 +283,35 @@ body {
 .buttons__item {
   display: inline-block;
   margin-left: 2px; }
-
-.buttons__item:first-child {
-  margin-left: 0; }
+  .buttons__item:first-child {
+    margin-left: 0; }
 
 .buttons__store-link {
   display: block;
   background: url("../img/sprites-store.png") no-repeat;
   width: 90px;
   height: 32px; }
-
-.apple {
-  background-position: -5px -5px; }
-
-.google {
-  background-position: -105px -5px; }
+  .buttons__store-link.apple {
+    background-position: -5px -5px; }
+  .buttons__store-link.google {
+    background-position: -105px -5px; }
 
 .buttons__social-link {
   display: block;
   background: url("../img/sprites-socials.png") no-repeat;
   width: 44px;
-  height: 44px; }
-
-.fb {
-  background-position: -5px -5px; }
-
-.tw {
-  background-position: -59px -5px; }
-
-.vk {
-  background-position: -113px -5px; }
-
-/*------------- Общие классы ------------*/
-/* Hide visually and from screen readers */
-.hidden {
-  display: none !important; }
-
-/* Hide only visually, but have it available for screen readers */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/* спрятать текст, который нужен лишь для семантики */
-.texthidden {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent; }
+  height: 44px;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .buttons__social-link:hover {
+    opacity: 0.8; }
+  .buttons__social-link.fb {
+    background-position: -5px -5px; }
+  .buttons__social-link.tw {
+    background-position: -59px -5px; }
+  .buttons__social-link.vk {
+    background-position: -113px -5px; }

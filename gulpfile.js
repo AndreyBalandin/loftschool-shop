@@ -25,7 +25,7 @@ var gulp = require("gulp"),
 
 // скомпилировать Jade в html
 gulp.task('jade', function() {
-  gulp.src('src/jade/pages/*.jade')
+  gulp.src(['src/jade/pages/*.jade', '!src/jade/pages/_*.jade'])
     .pipe(jade({ pretty: true }))
     .on('error', log)
     .pipe(gulp.dest('src/'))
@@ -34,7 +34,7 @@ gulp.task('jade', function() {
 
 // скомпилировать Sass в css
 gulp.task('sass', function () {
-  gulp.src('src/sass/**/*.scss')
+  gulp.src(['src/sass/**/*.scss', '!src/sass/**/_*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('src/css'));
 });

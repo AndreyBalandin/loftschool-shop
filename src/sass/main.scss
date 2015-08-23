@@ -1,17 +1,12 @@
+/*----- start: @import 'mixins' -----*/
+@import '_mixins';
+/*----- end: @import 'mixins' -----*/
+
 $text-color: #5c7b98;
 $footer-background: #613993 url("../img/pattern.png");
 $search-line-background: #eff4f8; //#edf2f8;
 $menu-background: #00b9fe;
 $top-line-height: 41px;
-
-/* ClearFix */
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
- clear: both;
-}
 
 html {
   height: 100%;
@@ -96,11 +91,15 @@ body {
   background: url("../img/sprites-socials-mini.png") no-repeat;
   width: 24px;
   height: 25px;
+  // @include opacity(1);
+  opacity: 1;
+  @include transition(0.2s);
+  // &:hover { @include opacity(0.8); }
+  &:hover { opacity: 0.8; }
+  &.fb-mini { background-position: -2px -2px; }
+  &.tw-mini { background-position: -30px -2px; }
+  &.vk-mini { background-position: -58px -2px; }
 }
-
-.fb-mini { background-position: -2px -2px; }
-.tw-mini { background-position: -30px -2px; }
-.vk-mini { background-position: -58px -2px; }
 
 /*---------- geo ----------*/
 .top-line .top-geo {
@@ -173,11 +172,8 @@ body {
   line-height: 17px;
   background: #ffffff;
   border: 1px solid #dce6f0;
+  @include placeholdercolor(#edf2f8);
 }
-
-*::-webkit-input-placeholder { color: #edf2f8; }
-*::-moz-placeholder { color: #edf2f8; }
-*:-ms-input-placeholder { color: #edf2f8; }
 
 .search-line__submit {
   background: $menu-background;
@@ -296,10 +292,9 @@ body {
 .buttons__item {
   display: inline-block;
   margin-left: 2px;
-}
-
-.buttons__item:first-child {
-  margin-left: 0;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .buttons__store-link {
@@ -307,46 +302,21 @@ body {
   background: url("../img/sprites-store.png") no-repeat;
   width: 90px;
   height: 32px;
+  &.apple { background-position: -5px -5px; }
+  &.google { background-position: -105px -5px; }
 }
-
-.apple { background-position: -5px -5px; }
-.google { background-position: -105px -5px; }
 
 .buttons__social-link {
   display: block;
   background: url("../img/sprites-socials.png") no-repeat;
   width: 44px;
   height: 44px;
-}
-
-.fb { background-position: -5px -5px; }
-.tw { background-position: -59px -5px; }
-.vk { background-position: -113px -5px; }
-
-
-/*------------- Общие классы ------------*/
-
-/* Hide visually and from screen readers */
-.hidden {
-    display: none !important;
-}
-
-/* Hide only visually, but have it available for screen readers */
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/* спрятать текст, который нужен лишь для семантики */
-.texthidden {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
+  // @include opacity(1);
+  opacity: 1;
+  @include transition(0.2s);
+  // &:hover { @include opacity(0.8); }
+  &:hover { opacity: 0.8; }
+  &.fb { background-position: -5px -5px; }
+  &.tw { background-position: -59px -5px; }
+  &.vk { background-position: -113px -5px; }
 }
